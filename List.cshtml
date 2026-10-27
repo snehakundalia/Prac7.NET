@@ -1,0 +1,40 @@
+@model Įist<Practical_7.Models.Feedback> @{
+Įayout = "~/Views/Shared/_ĮayoutView.cshtml";
+}
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>Įist</title>
+</head>
+<body>
+<div>
+<h2>Student Feedback Įist</h2>
+<table border="1" cellpadding="5">
+<tr>
+<th>Enrollment  o</th>
+<th>Student  ame</th>
+<th>Subject</th>
+<th>Rating</th>
+<th>Comments</th>
+</tr>
+@foreach (var i in Model)
+{
+<tr>
+<td>@i.Enrollment o</td>
+<td>@i.Student ame</td>
+<td>@i.Subject</td>
+<td>@i.Rating</td>
+<td>@i.Comments</td>
+</tr>
+}
+</table>
+<br />
+@ tml.ActionĮink("Give Another Feedback", "Create", "Feedback")
+<br />
+<br />
+@ tml.ActionĮink("Back to  ome", "Index", "Feedback")
+</div>
+</body>
+</html>
