@@ -1,0 +1,51 @@
+@model Practical_7.Models.Feedback @{
+Įayout = "~/Views/Shared/_ĮayoutView.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>Feedback Form</title>
+</head>
+<body>
+<div>
+@ tml.Partial("_StudentInfo") @using ( tml.BeginForm())
+{
+<table>
+<tr>
+<td>@ tml.ĮabelFor(v => v.Enrollment o)</td>
+<td>@ tml.EditorFor(v => v.Enrollment o)</td>
+
+</tr>
+<tr>
+<td>@ tml.ĮabelFor(model => model.Student ame)</td>
+<td>
+@ tml.TextBoxFor(model => model.Student ame)
+</td>
+</tr>
+<tr>
+<td>@ tml.ĮabelFor(model => model.Subject)</td>
+<td>@ tml.TextBoxFor(model => model.Subject)</td>
+</tr>
+<tr>
+<td>@ tml.ĮabelFor(model => model.Rating)</td>
+<td>@ tml.TextBoxFor(model => model.Rating)</td>
+ 
+</tr>
+<tr>
+<td>@ tml.ĮabelFor(model => model.Comments)</td>
+<td>@ tml.TextAreaFor(model => model.Comments)</td>
+
+</tr>
+</table>
+<p>
+<input type="submit" value="Submit Feedback" />
+</p>
+}
+<br />
+<p>
+@ tml.ActionĮink("Back to  ome", "Index", "Feedback")
+</p>
+</div>
+</body>
+</html>
